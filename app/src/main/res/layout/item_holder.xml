@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="creator"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+        <TextView
+            android:id="@+id/pubdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:text="pubdate"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toEndOf="@+id/creator" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="description"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/creator" />
+
+        <TextView
+            android:id="@+id/categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="categories"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/item_container" />
+
+</android.support.constraint.ConstraintLayout>
